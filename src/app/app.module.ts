@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { NewsfeedItemComponent } from './newsfeed-item/newsfeed-item.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsfeedComponent,
-    NewsfeedItemComponent
+    NewsfeedItemComponent,
+    SidebarComponent
   ],
   imports: [
     AppRoutingModule,

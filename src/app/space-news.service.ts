@@ -15,11 +15,17 @@ export class SpaceNewsService {
   public getArticles() {
     return this.http.get<Article[]>(`${this.api_url}/articles`);
   }
+
+  public getBlogs() {
+    return this.http.get<Blog[]>(`${this.api_url}/blogs`);
+  }
 }
 
-export interface Article {
-  id: number;
+export interface Article extends Blog {
   featured: boolean;
+}
+export interface Blog {
+  id: number;
   title: string;
   url: string;
   imageUrl: string;

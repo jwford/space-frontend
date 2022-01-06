@@ -2,6 +2,8 @@ ul {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 30px 50px;
+  gap: 50px;
   list-style-type: none;
+  grid-column-start: center;
+  grid-column-end: auto;
 }

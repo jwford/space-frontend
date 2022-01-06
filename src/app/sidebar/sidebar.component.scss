@@ -1,0 +1,14 @@
+#sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 0 0 20px;
+}
+
+.sidebar-link {
+  justify-content: center;
+}
+
+.sidebar-link:hover {
+  cursor: pointer;
+}
