@@ -1,4 +1,8 @@
-  <ul *ngIf="articles">
-      <app-newsfeed-item *ngFor="let article of articles" [article]="article"></app-newsfeed-item>
+  <ul *ngIf="articles"
+      infiniteScroll
+      [immediateCheck]="true"
+      [infiniteScrollDistance]="1"
+      (scrolled)="onScroll()">
+      <app-newsfeed-item *ngFor="let article of articles; let i = index" [article]="article"></app-newsfeed-item>
   </ul>
 

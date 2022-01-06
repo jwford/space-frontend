@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,8 @@ export class SpaceNewsService {
 
   constructor(private http: HttpClient) { }
 
-  public getArticles() {
-    return this.http.get<Article[]>(`${this.api_url}/articles`);
+  public getArticles(nextStart: number) {
+    return this.http.get<Article[]>(`${this.api_url}/articles?_start=${nextStart}`).pipe(map(res => res));
   }
 
   public getBlogs() {
