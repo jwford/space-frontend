@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as moment from 'moment';
 import { Article } from '../space-news.service';
 
 @Component({
@@ -9,4 +10,6 @@ import { Article } from '../space-news.service';
 export class NewsfeedItemComponent {
 
   @Input() article: Article | null = null;
+
+  public formattedDate = moment(this.article?.publishedAt).format('YYYY MMM Do');
 }

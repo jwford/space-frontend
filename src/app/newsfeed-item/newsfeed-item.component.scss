@@ -3,13 +3,20 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  text-align: center;
   height: auto;
   width: 600px;
 }
 
 .card img {
   border-radius: 10px 10px 0 0;
+}
+
+.cardInfo {
+  padding: 10px;
+}
+
+#cardSite {
+  font-size: 12px;
 }
 
 #cardTitle {

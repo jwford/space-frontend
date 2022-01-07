@@ -2,7 +2,8 @@
   <div class="card">
     <img src={{article.imageUrl}} />
     <div class="cardInfo">
-      <div id="cardTitle">{{article.title}}</div>
+      <div class="cardSite">{{article.newsSite}} ({{formattedDate}})</div>
+      <div id="cardTitle"><a href={{article.url}}>{{article.title}}</a></div>
     </div>
   </div>
 </li>
