@@ -11,6 +11,8 @@ export class NewsfeedComponent implements OnInit {
   public articles: Article[] = [];
   public nextStart = 0;
 
+  public search = '';
+
   constructor(private snapi_service: SpaceNewsService) { }
 
   ngOnInit(): void {
@@ -20,6 +22,12 @@ export class NewsfeedComponent implements OnInit {
   onScroll() {
     this.nextStart = this.nextStart + 10;
     this.getArticles(this.nextStart);
+  }
+
+  onSubmit() {
+    this.snapi_service.searchArticlesByTitle(this.search).subscribe(res => {
+      this.articles = res;
+    });
   }
 
   getArticles(nextStart: number) {

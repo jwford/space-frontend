@@ -17,6 +17,10 @@ export class SpaceNewsService {
     return this.http.get<Article[]>(`${this.api_url}/articles?_start=${nextStart}`).pipe(map(res => res));
   }
 
+  public searchArticlesByTitle(search: string) {
+    return this.http.get<Article[]>(`${this.api_url}/articles?title_contains=${search}`).pipe(map(res => res));
+  }
+
   public getBlogs() {
     return this.http.get<Blog[]>(`${this.api_url}/blogs`);
   }
