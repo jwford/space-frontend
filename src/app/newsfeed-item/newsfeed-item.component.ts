@@ -11,5 +11,6 @@ export class NewsfeedItemComponent {
 
   @Input() article: Article | null = null;
 
+  // TODO: this always shows the same date
   public formattedDate = moment(this.article?.publishedAt).format('YYYY MMM Do');
 }
