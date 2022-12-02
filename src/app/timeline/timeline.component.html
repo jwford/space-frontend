@@ -1,0 +1,5 @@
+<mgl-timeline *ngIf="launches">
+  <div *ngFor="let launch of launches">
+    <app-timeline-item [launch]="launch"></app-timeline-item>
+  </div>
+</mgl-timeline>
