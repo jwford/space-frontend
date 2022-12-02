@@ -12,8 +12,8 @@ export class TimelineComponent implements OnInit {
 
   constructor(private spacex: SpacexService) { }
 
-  ngOnInit(): void {
-    this.launches = this.spacex.getLaunches();
+  ngOnInit() {
+    this.spacex.getLaunches().subscribe(res => this.launches = res);
   }
 
 }

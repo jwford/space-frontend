@@ -1,10 +1,5 @@
 <mgl-timeline-entry *ngIf="launch">
-  <div>
-    <div>
-      <h3>{{launch.mission_name}} (Flight number {{launch.flight_number}})</h3>
-      <!-- <h4 class="launch_date">Launched on {{formatLaunchDateLocal()}} from {{launch.launch_site.site_name}}</h4> -->
-      <img *ngIf="launch.links.mission_patch" [src]="launch.links.mission_patch" alt="mission patch" width="70px" height="70px" class="patch" />
-    </div>
-    <p *ngIf="launch.details" class='launch_details'>{{launch.details}}</p>
-  </div>
+  <mgl-timeline-entry-header>{{launch.name}} (Flight number {{launch.flight_number}})</mgl-timeline-entry-header>
+  <mgl-timeline-entry-content *ngIf="launch.details" class='launch_details'>{{launch.details}}</mgl-timeline-entry-content>
+  <mgl-timeline-entry-dot></mgl-timeline-entry-dot>
 </mgl-timeline-entry>
