@@ -1,0 +1,5 @@
+<mgl-timeline-entry *ngIf="launch">
+  <mgl-timeline-entry-header>{{launch.name}} (Flight number {{launch.flight_number}})</mgl-timeline-entry-header>
+  <mgl-timeline-entry-content *ngIf="launch.details" class='launch_details'>{{launch.details}}</mgl-timeline-entry-content>
+  <mgl-timeline-entry-dot></mgl-timeline-entry-dot>
+</mgl-timeline-entry>

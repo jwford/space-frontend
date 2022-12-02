@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "snapi"
+  "cli": {
+    "analytics": "1cd693fb-147d-443f-a8a9-37332065097d"
+  }
 }
