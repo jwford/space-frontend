@@ -44,3 +44,13 @@ jobs:
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Deploy to DigitalOcean App Platform
+        uses: digitalocean/app_action@main
+        with:
+          app_name: ${{ secrets.DIGITALOCEAN_APP_NAME }}
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
