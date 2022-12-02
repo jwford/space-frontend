@@ -1,16 +1,14 @@
-FROM node
+FROM node:14.15.4 as node
 
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN npm ci
-
 COPY . .
 
-EXPOSE 4200
+RUN npm install
 
-RUN npm run build
+RUN npm run build --prod
 
-CMD ["npm", "start"]
 
+FROM nginx:alpine
+
+COPY --from=node /app/dist/snapi /usr/share/nginx/html
