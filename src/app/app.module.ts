@@ -13,6 +13,7 @@ import { NewsfeedItemComponent } from './newsfeed-item/newsfeed-item.component';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { TimelineItemComponent } from './timeline-item/timeline-item.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TimelineComponent } from './timeline/timeline.component';
     NewsfeedComponent,
     NewsfeedItemComponent,
     TimelineItemComponent,
-    TimelineComponent
+    TimelineComponent,
+    NavbarComponent
   ],
   imports: [
     AppRoutingModule,
