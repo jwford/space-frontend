@@ -12,12 +12,12 @@
     </div>
   </form>
 </div> -->
-  <ul *ngIf="articles"
-      infiniteScroll
-      [immediateCheck]="true"
-      [infiniteScrollDistance]="1"
-      (scrolled)="onScroll()">
-      <app-newsfeed-item *ngFor="let article of articles" [article]="article"></app-newsfeed-item>
-  </ul>
+<ul *ngIf="articles"
+  infiniteScroll
+  [immediateCheck]="true"
+  [infiniteScrollDistance]="1"
+  (scrolled)="onScroll()">
+  <app-newsfeed-item *ngFor="let article of articles" [article]="article"></app-newsfeed-item>
+</ul>
 
 

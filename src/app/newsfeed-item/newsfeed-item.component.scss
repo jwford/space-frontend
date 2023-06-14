@@ -11,30 +11,38 @@ $box-shadow-dark: 0 2px 2px 0 rgba(0, 0, 0, 0.8);
     $box-shadow-dark;
   display: flex;
   flex-direction: column;
-  height: auto;
-  width: 600px;
-}
+  height: 30rem;
+  width: 20rem;
 
-.card img {
-  border-radius: 10px 10px 0 0;
+  img {
+    border-radius: 10px 10px 0 0;
+  }
 }
 
 .cardInfo {
   padding: 10px;
 }
 
-#cardSite {
-  font-size: 12px;
+.cardSite {
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
-#cardTitle {
-  font-size: 26px;
+.cardTitle {
+  font-size: 1.2rem;
+  padding-bottom: 0.3rem;
+
+  a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
 }
 
-#cardTitle:hover {
-  cursor: pointer;
-}
-
-#cardSummary {
-  font-size: 16px;
+.cardSummary {
+  font-size: 0.9rem;
 }

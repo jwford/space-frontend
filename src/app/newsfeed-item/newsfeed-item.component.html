@@ -3,8 +3,9 @@
     <img src={{article.imageUrl}} />
     <div class="cardInfo">
       <div class="cardSite">{{article.newsSite}} ({{formattedDate}})</div>
-      <div id="cardTitle"><a href={{article.url}}>{{article.title}}</a></div>
-      <div id="cardSummary">{{article.summary}}</div>
+      <div class="cardTitle"><a href={{article.url}}>{{article.title}}</a></div>
+      <!-- TODO: truncate summary overflows -->
+      <div class="cardSummary">{{article.summary}}</div>
     </div>
   </div>
 </li>
