@@ -10,7 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { NewsfeedItemComponent } from './newsfeed-item/newsfeed-item.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { TimelineItemComponent } from './timeline-item/timeline-item.component';
 import { TimelineComponent } from './timeline/timeline.component';
@@ -20,7 +19,6 @@ import { TimelineComponent } from './timeline/timeline.component';
     AppComponent,
     NewsfeedComponent,
     NewsfeedItemComponent,
-    SidebarComponent,
     TimelineItemComponent,
     TimelineComponent
   ],
