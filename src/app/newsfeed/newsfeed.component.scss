@@ -1,20 +1,29 @@
-#newsfeedTop{
-  align-items: center;
-  display: flex;
-  gap: 500px;
+.search {
+  margin-left: 2.4rem;
+
+  button {
+    border-radius: 10px;
+    height: 2rem;
+    margin-left: 1.5rem;
+  }
+
+  input[type=text] {
+    border-radius: 10px;
+    height: 2rem;
+    padding-left: 0.5rem;
+    transition: width 0.5s ease-in-out;
+    width: 16.8%;
+  }
+
+  input[type=text]:focus {
+    width: 70%
+  }
 }
 
-#newsfeedTop h1 {
-  color: white;
-  font-size: 36;
-}
-
-ul {
+.newsfeed {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 50px;
   list-style-type: none;
-  grid-column-start: center;
-  grid-column-end: auto;
 }

@@ -1,23 +1,18 @@
-<div id="newsfeedTop">
-  <h1>Space News</h1>
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <input type="text"
-            class="form-control"
-            id="search"
-            [(ngModel)]="search"
-            name="search"
-            placeholder="Search by title" />
-        <button type="submit">Search</button>
-    </div>
-  </form>
-</div>
-  <ul *ngIf="articles"
-      infiniteScroll
-      [immediateCheck]="true"
-      [infiniteScrollDistance]="1"
-      (scrolled)="onScroll()">
-      <app-newsfeed-item *ngFor="let article of articles" [article]="article"></app-newsfeed-item>
-  </ul>
-
-
+<form class ="search" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <input type="text"
+          class="form-control"
+          id="search"
+          [(ngModel)]="search"
+          name="search"
+          placeholder="Search by title..." />
+    <button type="submit">Search</button>
+  </div>
+</form>
+<ul class="newsfeed" *ngIf="articles"
+    infiniteScroll
+    [immediateCheck]="true"
+    [infiniteScrollDistance]="1"
+    (scrolled)="onScroll()">
+    <app-newsfeed-item *ngFor="let article of articles" [article]="article"></app-newsfeed-item>
+</ul>

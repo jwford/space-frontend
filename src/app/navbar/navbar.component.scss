@@ -1,0 +1,22 @@
+nav {
+  border-bottom: solid white 2px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 0 2rem 0 2rem;
+
+  .title {
+    color: white;
+  }
+
+  .nav_links {
+    display: flex;
+    gap: 5rem;
+    list-style-type: none;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
