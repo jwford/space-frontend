@@ -1,3 +1,4 @@
-<mgl-timeline *ngIf="launches">
+<mgl-timeline *ngIf="launches" [alternate]="true">
+  <!-- TODO: mgl-timeline-entry needs to be a direct child of mgl-timeline for "alternate" to work correctly..find a fix" -->
     <app-timeline-item *ngFor="let launch of launches" [launch]="launch"></app-timeline-item>
 </mgl-timeline>
